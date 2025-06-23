@@ -4,10 +4,21 @@
 	"version": "1.0",
 	"description": "Chrome extension skeleton",
 	"action": {
-		"default_popup": "popup.html"
+	"default_popup": "popup.html"
 	},
 	"background": {
-		"service_worker": "background.js"
+	"service_worker": "background.js"
 	},
-	"permissions": []
+	"permissions": [],
+	"web_accessible_resources": [
+	{
+	"resources": [
+	"dictionaries/*.dic",
+	"dictionaries/*.aff"
+	],
+	"matches": [
+	"<all_urls>"
+	]
+	}
+	]
 }
